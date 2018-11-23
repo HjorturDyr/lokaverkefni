@@ -1,16 +1,12 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Film;
 
-Route::get('/Films', function () {
-    return view('films.index', compact('films'));
-});
+Route::get('/', 'HomeController@home');
 
-Route::get('/Timeline', function () {
-    return view('films.timeline', compact('films'));
-});
+Route::get('/films', 'FilmsController@index');
+Route::get('/films/{id}', 'FilmsController@show');
+Route::get('/timeline', 'FilmsController@timeline');
 
 Route::get('/Films/{film}', function () {
     return view('films.timeline', compact('films'));
