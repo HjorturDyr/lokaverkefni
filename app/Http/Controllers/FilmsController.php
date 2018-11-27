@@ -16,11 +16,15 @@ class FilmsController extends Controller
 
     public function timeline() 
     {
+    	$films = Film::all();
+    	
     	return view('films.timeline', compact('films'));
     }
 
-    public function show() 
+    public function show(Film $film) 
     {
+        $films = Film::all();
 
+        return view('films.show', compact('films'));
     }
 }
