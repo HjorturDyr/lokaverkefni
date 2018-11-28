@@ -17,6 +17,7 @@ class CreateFilmsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('synopsis');
+            $table->integer('realease_date');
             $table->string('poster');
             $table->timestamps();
         });

@@ -2,9 +2,11 @@
 
 @section('content')
 <h1>
-	{{ $films->title }}
+	{{ $film->title }}
 </h1>
 <p>
-	{{ $films->synopsis }}
+	{{ $film->synopsis }}
 </p>
+
+
 @endsection
