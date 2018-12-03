@@ -9,7 +9,7 @@ class FilmsController extends Controller
 {
     public function index() 
     {
-    	$films = Film::all();
+    	$films = Film::orderby('title')->get();
 
     	return view('films.index', compact('films'));
     }

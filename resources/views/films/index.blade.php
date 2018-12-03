@@ -1,15 +1,17 @@
 @extends('layout')
 	
 @section('content')
-    <h1>All Films!!!</h1>
-    <button>A -> Z</button>
-    <button>Z -> A</button>
-    <button>Release Date</button>
-    @foreach ($films as $film)
-    	<div class="container card text-white bg-dark mb-3" style="max-width: 18rem;">
-    		<a href="/films/{{$film->id}}">{{$film->title}}</a>
-    		<p>???</p>
-    		<p>{{$film->synopsis}}</p>
-    	</div>
-    @endforeach
+    <h1 class="text-white">All Films!!!</h1>
+    <button style="border-radius: 10px; background-color: lightblue; border-color: lightblue;" >A -> Z</button>
+    <button style="border-radius: 10px; background-color: lightblue; border-color: lightblue;">Z -> A</button>
+    <button style="border-radius: 10px; background-color: lightblue; border-color: lightblue;">Release Date</button>
+    <div class="row">
+        @foreach ($films as $film)
+    	   <div class="container card text-white bg-dark mb-3" style="max-width: 18rem;">
+    		  <a href="/films/{{$film->id}}">{{$film->title}}</a>
+    		  <img src="{{$film->poster}}">
+    		  <p>{{$film->synopsis}}</p>
+    	   </div>
+        @endforeach
+    </div>
 @endsection
