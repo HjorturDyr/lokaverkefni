@@ -1,12 +1,12 @@
 @extends('layout')
 	
 @section('content')
-	<div class="container-fluid bg-dark" style="margin-bottom: 10px;">
+	<div class="container-fluid bg-dark" style="margin-bottom: 10px; border-radius: 10px;">
 		<div>
 			<h1 class="d-flex justify-content-around">Phase 1</h1>
 			<div class="row">
 				@foreach ($films as $film)
-    				<div class="container" style="max-width: 18rem; margin-bottom: 2px; background-color: #D73B3B; border-radius: 10px;">
+    				<div class="container" style="max-width: 18rem; margin-bottom: 2px; background-color: #7AF2F6; border-radius: 10px;">
     					<a href="/films/{{$film->id}}">{{$film->title}}</a>
     					<p>???</p>
     					<p>{{$film->synopsis}}</p>
